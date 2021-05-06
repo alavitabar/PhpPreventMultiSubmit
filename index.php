@@ -3,10 +3,10 @@
 session_start();
 
 /*** create the form token ***/
-$form_token = MD5(uniqid());
+$_token = MD5(uniqid());
 
 /*** add the form token to the session ***/
-$_SESSION['form_token'] = $form_token;
+$_SESSION['form_token'] = $_token;
 ?>
 <!DOCTYPE html>
 <head>
@@ -14,7 +14,7 @@ $_SESSION['form_token'] = $form_token;
 </head>
 <body>
 <form action="process.php" method="post">
-    <input type="hidden" name="_token" value="<?php echo $form_token; ?>" />
+    <input type="hidden" name="_token" value="<?php echo $_token; ?>" />
     <div>
         <label for="name">Name</label>
         <input type="text" name="name" />
