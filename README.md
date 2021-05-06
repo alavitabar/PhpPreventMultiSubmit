@@ -1,1 +1,1 @@
-# PhpPreventMultiSubmit
+# PhpPreventMultiSubmits
